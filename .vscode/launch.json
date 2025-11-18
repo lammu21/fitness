@@ -1,0 +1,42 @@
+{
+    "configurations": [
+          {
+            "type": "java",
+            "name": "EurekaApplication",
+            "request": "launch",
+            "mainClass": "com.example.eureka.EurekaApplication",
+            "projectName": "eureka"
+        },
+        {
+            "type": "java",
+            "name": "AiserviceApplication",
+            "request": "launch",
+            "mainClass": "com.fitness.aiservice.AiserviceApplication",
+            "projectName": ""
+        },
+      
+        {
+            "type": "java",
+            "name": "ActivityserviceApplication",
+            "request": "launch",
+            "mainClass": "com.example.activityservice.ActivityserviceApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UserserviceApplication<userservice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.fitness.userservice.UserserviceApplication",
+            "projectName": "userservice",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ],
+    "compounds": [
+    {
+      "name": "Run All Services",
+      "configurations": ["AiserviceApplication", "EurekaApplication", "ActivityserviceApplication", "Spring Boot-UserserviceApplication<userservice>"]
+    }
+  ]
+}
