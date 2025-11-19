@@ -18,12 +18,12 @@ public class ActivityService
      private final ActivityRepository activityRepository;
 
      private final UserValidationService userValidationService;
-
+// --------------------Kafka Configuration--------------------------------
      private final KafkaTemplate<String,Activity> kafkaTemplate;
 
      @Value("${kafka.topic.name}")
      private String topicName;
-
+// / --------------------Kafka Configuration--------------------------------
     public ActivityResponse trackActivity(ActivityRequest request) 
     {
 
@@ -43,7 +43,7 @@ public class ActivityService
             .build();
 
             Activity savedActivity = activityRepository.save(activity);
-
+// / --------------------Kafka Configuration--------------------------------
             try {
             kafkaTemplate.send(topicName,savedActivity.getUserId(),savedActivity);
                 
@@ -51,8 +51,7 @@ public class ActivityService
                 
                 e.printStackTrace();
             }
-        
-            
+//   / --------------------Kafka Configuration--------------------------------          
             return  mapToResponse(savedActivity);
     }
 

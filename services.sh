@@ -4,7 +4,7 @@ BASE="/Users/saitejanedunoori/Desktop/Projects/FitnessApp"
 
 # Directories
 EUREKA_DIR="$BASE/eureka"
-AISERVICE_DIR="$BASE/aiservice"
+AISERVICE_DIR="$BASE/AIRecommendationService"
 ACTIVITY_DIR="$BASE/activityservice"
 USER_DIR="$BASE/userservice"
 
