@@ -12,6 +12,10 @@ spring:
     producer:
        key-serializer: org.apache.kafka.common.serialization.StringSerializer
        value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+       properties:
+         spring.json.add.type.headers: false
+        #  spring.json.type.mapping: activity:com.fitness.activityservice.model.Activity
+        #  spring.json.trusted.packages: "*"
 kafka:
     topic:
        name: activity-events      

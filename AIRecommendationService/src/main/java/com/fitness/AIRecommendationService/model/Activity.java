@@ -13,7 +13,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(collection = "activities")
+
 @Data
 @Builder
 @AllArgsConstructor
